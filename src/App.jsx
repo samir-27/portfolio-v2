@@ -7,7 +7,7 @@ import Service from './components/Service'
 
 function App() {
   return (
-    <>
+    <div className=''>
       <Navbar />
       <div id="home">
         <Hero />
@@ -27,7 +27,7 @@ function App() {
       <div id="home">
         <Parallax />
       </div>
-    </>
+    </div>
   )
 }
 

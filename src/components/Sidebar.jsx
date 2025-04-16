@@ -22,7 +22,7 @@ const Sidebar = () => {
             clipPath: `circle(1200px at 40px 40px)`,
             transition: {
                 type: "spring",
-                stiffness: 15,
+                stiffness: 25,
             },
         },
         closed: {
