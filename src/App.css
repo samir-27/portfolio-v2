@@ -9,7 +9,7 @@ body{
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
 }
 
@@ -34,4 +34,6 @@ a {
 .hero{
   background: linear-gradient(180deg , #0c0c1d, #111132);
 }
+
+
 

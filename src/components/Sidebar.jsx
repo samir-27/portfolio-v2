@@ -65,12 +65,12 @@ const Sidebar = () => {
     return (
         <div>
             <motion.div
-                className="fixed top-0 left-0 h-full w-92 bg-white z-40"
+                className="fixed top-0 left-0 h-full w-92 bg-white z-50"
                 initial="closed"
                 animate={open ? "open" : "closed"}
                 variants={variants}
             >
-                <motion.div variants={linkVareiants} className="h-full flex flex-col items-center justify-center space-y-6 text-5xl gap-8 text-black">
+                <motion.div variants={linkVareiants} className="h-full flex flex-col items-center justify-center space-y-6 text-5xl gap-8 text-black z-50">
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#home" className="mx-4">Home</motion.a>
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#services" className="">Services</motion.a>
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#projects" className="">Projects</motion.a>

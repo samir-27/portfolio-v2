@@ -12,18 +12,14 @@ function App() {
       <div id="home">
         <Hero />
       </div>
-      <div id="home">
-        <Parallax />
-      </div>
       <div id="services">
+        <Parallax type={"service"} />
+      </div>
         <Service />
-      </div>
-      <div id="home">
-        <Parallax />
-      </div>
       <div id="projects">
-        <Projects />
+        <Parallax type={"Project"}/>
       </div>
+        <Projects />
       <div id="home">
         <Parallax />
       </div>
