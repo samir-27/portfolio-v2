@@ -20,9 +20,10 @@ function App() {
         <Parallax type={"Project"}/>
       </div>
         <Projects />
-      <div id="home">
+        <h1 className='text-8xl text-white'>Hello</h1>
+      {/* <div id="home">
         <Parallax />
-      </div>
+      </div> */}
     </div>
   )
 }
