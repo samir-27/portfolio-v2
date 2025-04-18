@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Parallax from './components/Parallax'
 import Projects from './components/Projects'
 import Service from './components/Service'
+import Skills from './components/Skills'
 
 function App() {
   return (
@@ -20,10 +21,11 @@ function App() {
         <Parallax type={"Project"}/>
       </div>
         <Projects />
-        <h1 className='text-8xl text-white'>Hello</h1>
-      {/* <div id="home">
-        <Parallax />
-      </div> */}
+
+      <div id="Technologies">
+        <Parallax type={"Skills"}/>
+      </div>
+        <Skills />
     </div>
   )
 }

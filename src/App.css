@@ -31,6 +31,10 @@ a {
   margin: auto;
 }
 
+.parallax{
+  background: linear-gradient(180deg , #0c0c1d, #111132);
+  height: 100vh;
+}
 .hero{
   background: linear-gradient(180deg , #0c0c1d, #111132);
 }
@@ -40,5 +44,9 @@ a {
 }
 
 .projects {
+  background: linear-gradient(180deg , #0c0c1d, #111132);
+}
+
+.skills {
   background: linear-gradient(180deg , #0c0c1d, #111132);
 }
