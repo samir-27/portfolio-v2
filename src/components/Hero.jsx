@@ -32,14 +32,14 @@ const textVariants = {
 const Hero = () => {
     return (
         <div className='section hero relative overflow-hidden'>
-            <div className="flex container mx-auto gap-10">
-                <div className='h-screen w-1/2'>
-                    <img src={hero} alt="" className='h-full' />
+            <div className="lg:flex container mx-auto gap-10">
+                <div className='lg:h-screen lg:w-1/2 w-full lg:pb-0 pb-4 flex justify-center items-center'>
+                    <img src={hero} alt="" className='lg:h-full h-[32rem] ' />
                 </div>
 
-                <motion.div variants={textVariants} className='h-screen w-1/2 flex flex-col justify-center gap-10 relative' initial="initial" animate="animate">
-                    <motion.h2 variants={textVariants} className='text-4xl font-semibold text-purple-500 tracking-widest'>Samir Sumara</motion.h2>
-                    <motion.h1 variants={textVariants} className='text-7xl font-bold text-white'>Web Developer </motion.h1>
+                <motion.div variants={textVariants} className='lg:h-screen lg:w-1/2 w-full flex flex-col justify-center lg:items-start items-center gap-10 relative' initial="initial" animate="animate">
+                    <motion.h2 variants={textVariants} className='md:text-4xl text-3xl font-semibold text-purple-500 tracking-widest'>Samir Sumara</motion.h2>
+                    <motion.h1 variants={textVariants} className='md:text-7xl text-5xl font-bold text-white'>Web Developer </motion.h1>
                     <motion.div variants={textVariants} className='flex gap-4'>
                         <motion.button variants={textVariants} className='p-4 border-1 border-white rounded bg-white cursor-pointer'>See The Latest Works</motion.button>
                         <motion.button variants={textVariants} className='p-4 border-1 border-white rounded text-white cursor-pointer'>Contact me</motion.button>

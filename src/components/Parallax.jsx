@@ -31,7 +31,7 @@ const Parallax = ({ type }) => {
       <div className=''>
 
         <motion.h1
-          className="text-white text-9xl text-center pt-50 "
+          className="text-white sm:text-9xl text-8xl text-center xl:pt-50 pt-96"
           style={{ y: yText }}
         >
           {type}
@@ -42,7 +42,7 @@ const Parallax = ({ type }) => {
         style={{ x: xStars }}
         className="stars absolute top-0 left-0 w-full will-change-transform"
       >
-        <img src={stars} alt="stars" className="w-full object-cover" />
+        <img src={stars} alt="stars" className="w-full  lg:h-full h-screen object-cover" />
       </motion.div>
 
  

@@ -82,25 +82,25 @@ const projectVariants = {
 
 const Single = ({ item }) => {
 
-      const cardRef = useRef(null);
-      const [rotate, setRotate] = useState({ x: 0, y: 0 });
-  
-      const handleMouseMove = (e) => {
-          const card = cardRef.current;
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const midX = rect.width / 2;
-          const midY = rect.height / 2;
-          const rotateX = ((y - midY) / midY) * -20;
-          const rotateY = ((x - midX) / midX) * 20;
-          setRotate({ x: rotateX, y: rotateY });
-      };
-  
-      const resetRotation = () => {
-          setRotate({ x: 0, y: 0 });
-      };
-  
+  const cardRef = useRef(null);
+  const [rotate, setRotate] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const card = cardRef.current;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const midX = rect.width / 2;
+    const midY = rect.height / 2;
+    const rotateX = ((y - midY) / midY) * -20;
+    const rotateY = ((x - midX) / midX) * 20;
+    setRotate({ x: rotateX, y: rotateY });
+  };
+
+  const resetRotation = () => {
+    setRotate({ x: 0, y: 0 });
+  };
+
 
   return (
     <motion.div
@@ -110,51 +110,51 @@ const Single = ({ item }) => {
       viewport={{ once: true, amount: 0.3 }}
       className="section flex justify-center items-center container mx-auto"
     >
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-10" style={{ perspective: '1500px' }}>
+      <div className="flex flex-col xl:flex-row justify-center items-center gap-10" style={{ perspective: '1500px' }}>
 
-        <motion.div className="w-full lg:w-1/2 flex justify-center items-center border-white/20 border-2 rounded-xl shadow-xl shadow-purple-500/50 bg-white/20 backdrop-blur-md p-2 h-full"
-                  ref={cardRef}
-                  viewport={{ once: true, amount: 0.3 }}
-                  style={{ transformStyle: 'preserve-3d' }}
-                            initial={{
-                                rotateX: 0,
-                                rotateY: 0,
-                                opacity: 0,
-                                scale: 0.5,
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                scale: 1,
-                            }}
-                            animate={{
-                                rotateX: rotate.x,
-                                rotateY: rotate.y,
-                            }}
-                            whileHover={{
-                                                               backgroundColor: "#8b5cf6",
-                                color: "#fff",
-                            }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 100,
-                                damping: 20,
-                            }}
-                            onMouseMove={handleMouseMove}
-                            onMouseLeave={resetRotation}
-        
+        <motion.div className="w-full xl:w-1/2 flex justify-center items-center border-white/20 border-2 rounded-xl shadow-xl shadow-purple-500/50 bg-white/20 backdrop-blur-md p-2 h-full"
+          ref={cardRef}
+          viewport={{ once: true, amount: 0.3 }}
+          style={{ transformStyle: 'preserve-3d' }}
+          initial={{
+            rotateX: 0,
+            rotateY: 0,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          animate={{
+            rotateX: rotate.x,
+            rotateY: rotate.y,
+          }}
+          whileHover={{
+            backgroundColor: "#8b5cf6",
+            color: "#fff",
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+          }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={resetRotation}
+
         >
           <img
             src={item.image}
             alt={item.title}
-            className="rounded-xl object-cover md:h-96"
-  
+            className="rounded-xl h-full xl:h-96"
+
           />
         </motion.div>
 
-        <div className="w-full lg:w-1/2 flex flex-col justify-between">
-          <div>
+        <div className="w-full xl:w-1/2 flex flex-col justify-between ">
+          <div className='flex flex-col justify-center sm:items-start items-center gap-4'>
             <h1 className="text-4xl text-purple-500 font-semibold">{item.title}</h1>
-            <p className="text-white/80 text-lg mt-2">{item.description}</p>
+            <p className="text-white/80 text-xl mt-2 sm:text-start text-center">{item.description}</p>
             <h1 className="text-white text-2xl py-5">Technology Used: </h1>
             <div>
               <ul className="flex gap-4">
@@ -166,7 +166,7 @@ const Single = ({ item }) => {
               </ul>
             </div>
           </div>
-          <div className="flex gap-4 py-5">
+          <div className="flex sm:mx-0 mx-auto gap-4 py-5">
             {item.live && (
               <a href={item.live} className="text-purple-500 hover:text-white hover:bg-purple-500 p-3 border-2 border-purple-500 rounded-md transition-colors duration-300 ease-in-out">View Project</a>
             )}
@@ -194,10 +194,10 @@ const Projects = () => {
   });
 
   return (
-    <div ref={ref} className='projects'>
+    <div ref={ref} className='projects px-4'>
       <div className='sticky top-0 left-0 w-full project-header bg-[#0e0e0e]/100 backdrop-blur-md z-30'>
 
-        <h1 className='text-6xl md:text-8xl text-center  text-purple-500 py-6'>
+        <h1 className='text-4xl md:text-8xl text-center  text-purple-500 py-6'>
           Featured Works
         </h1>
         <div className='relative w-full h-2 bg-white/20'>

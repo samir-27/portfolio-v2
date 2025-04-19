@@ -27,7 +27,7 @@ const SkillCard = ({ icon: Icon, label }) => {
     };
 
     return (
-        <div className='w-52 h-52' style={{ perspective: '1000px' }}>
+        <div className='md:w-52 md:h-52 h-40 w-40' style={{ perspective: '1000px' }}>
             <motion.div
                 ref={cardRef}
                 className='w-full h-full border text-purple-400 text-shadow-white text-shadow-xs shadow shadow-white border-purple/20 bg-white/10 rounded-xl flex flex-col items-center justify-center'
@@ -83,7 +83,7 @@ const Skills = () => {
     ];
 
     return (
-        <div className='section flex py-10 skills'>
+        <div className='section flex py-10 px-4 skills'>
             <div className='grid grid-cols-2 container mx-auto md:grid-cols-3 lg:grid-cols-4 gap-15 place-items-center'>
                 {skills.map((skill, index) => (
                     <SkillCard key={index} icon={skill.icon} label={skill.label} />

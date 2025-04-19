@@ -12,7 +12,7 @@ const ServiceCard = ({ service, isReversed }) => {
 
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-2xl shadow-2xl max-w-6xl mx-auto flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''}`}
+      className={`relative overflow-hidden my-10 rounded-2xl shadow-2xl max-w-6xl mx-auto flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''}`}
       initial="rest"
       whileHover="hover"
       animate="rest"

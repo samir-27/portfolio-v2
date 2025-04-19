@@ -40,11 +40,11 @@ const Contacts = () => {
             variants={variants}
             initial="initial"
             whileInView="animate"
-            className="section container mx-auto text-white py-16 px-4 flex gap-10 items-center justify-center"
+            className="section container mx-auto text-white py-16 px-4 sm:flex flex-cols gap-10 items-center justify-center"
         >
             {/* Contact Info */}
-            <motion.div variants={variants} className="w-1/2">
-                <motion.h1 variants={variants} className="text-7xl font-bold mb-4">
+            <motion.div variants={variants} className="sm:w-1/2 sm:mb-0 mb-20">
+                <motion.h1 variants={variants} className="lg:text-7xl text-5xl font-bold mb-4">
                     Let's work together
                 </motion.h1>
                 <motion.div variants={variants} className="space-y-4 text-lg">
@@ -64,13 +64,13 @@ const Contacts = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <div className="w-1/2 relative">
+            <div className="sm:w-1/2 relative z-0">
                 <motion.div
                     initial={{ opacity: 1 }}
                     whileInView={{ opacity: 0 }}
                     transition={{ delay: 3, duration: 1 }}
                     viewport={{ once: true }}
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                 >
                     <svg width="400px" height="400px" viewBox="0 0 24 24" fill="none">
                         <motion.path
@@ -87,43 +87,47 @@ const Contacts = () => {
                     </svg>
                 </motion.div>
 
-                <motion.form
-                    ref={formRef}
-                    onSubmit={sendEmail}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 4, duration: 1 }}
-                    className="w-full flex flex-col gap-5"
-                >
-                    <input
-                        type="text"
-                        placeholder="Name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400"
-                    />
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400"
-                    />
-                    <textarea
-                        rows={6}
-                        placeholder="Message"
-                        name="message"
-                        required
-                        className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md placeholder-white resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
-                    ></textarea>
-                    <button
-                        type="submit"
-                        className="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded-md font-semibold transition duration-300"
+
+                <div className='z-50'>
+
+                    <motion.form
+                        ref={formRef}
+                        onSubmit={sendEmail}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 4, duration: 1 }}
+                        className="w-full flex flex-col gap-5"
                     >
-                        Submit
-                    </button>
-                </motion.form>
+                        <input
+                            type="text"
+                            placeholder="Name"
+                            name="name"
+                            required
+                            className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        />
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            required
+                            className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md placeholder-white focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        />
+                        <textarea
+                            rows={6}
+                            placeholder="Message"
+                            name="message"
+                            required
+                            className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-md placeholder-white resize-none focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        ></textarea>
+                        <button
+                            type="submit"
+                            className="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded-md font-semibold transition duration-300"
+                        >
+                            Submit
+                        </button>
+                    </motion.form>
+                </div>
             </div>
             <ToastContainer position="bottom-right" autoClose={3000} theme="dark" />
         </motion.div>
