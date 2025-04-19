@@ -19,7 +19,6 @@ a {
 
 .section {
   min-height: 100vh;
-  scroll-snap-align: center;
 }
 
 .navbar{
@@ -48,5 +47,6 @@ a {
 }
 
 .skills {
+ 
   background: linear-gradient(180deg , #0c0c1d, #111132);
 }

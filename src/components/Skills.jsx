@@ -30,7 +30,7 @@ const SkillCard = ({ icon: Icon, label }) => {
         <div className='w-52 h-52' style={{ perspective: '1000px' }}>
             <motion.div
                 ref={cardRef}
-                className='w-full h-full border text-purple-400 border-purple/20 bg-white/10 rounded-xl flex flex-col items-center justify-center'
+                className='w-full h-full border text-purple-400 text-shadow-white text-shadow-xs shadow shadow-white border-purple/20 bg-white/10 rounded-xl flex flex-col items-center justify-center'
                 style={{ transformStyle: 'preserve-3d' }}
                 initial={{
                     rotateX: 0,
@@ -60,7 +60,8 @@ const SkillCard = ({ icon: Icon, label }) => {
                 onMouseMove={handleMouseMove}
                 onMouseLeave={resetRotation}
             >
-                <Icon className='text-8xl' />
+                <Icon className='text-8xl drop-shadow-sm drop-shadow-purple-600' />
+
                 <motion.h1 className="text-xl mt-2">{label}</motion.h1>
             </motion.div>
         </div>

@@ -1,4 +1,5 @@
 import './App.css'
+import Contacts from './components/Contacts'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import Parallax from './components/Parallax'
@@ -22,10 +23,13 @@ function App() {
       </div>
         <Projects />
 
-      <div id="Technologies">
+      <div id="skills">
         <Parallax type={"Skills"}/>
       </div>
         <Skills />
+      <div id="contact">
+        <Contacts />
+        </div>
     </div>
   )
 }

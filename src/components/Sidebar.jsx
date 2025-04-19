@@ -74,7 +74,7 @@ const Sidebar = () => {
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#home" className="mx-4">Home</motion.a>
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#services" className="">Services</motion.a>
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#projects" className="">Projects</motion.a>
-                    <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#about" className="">About</motion.a>
+                    <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#skills" className="">Skills</motion.a>
                     <motion.a variants={itemsVarients} whileHover={{scale:1.2}} whileTap={{scale:0.90}}  href="#contact" className="">Contact</motion.a>
                 </motion.div>
             </motion.div>
